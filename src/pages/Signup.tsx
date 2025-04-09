@@ -23,7 +23,7 @@ export default function Signup() {
   const navigate = useNavigate();
 
 
-  const { mutate, isLoading,// error, isSuccess, data 
+  const { mutate, isPending,// error, isSuccess, data 
 
   } = useSignup();
 
@@ -73,8 +73,8 @@ export default function Signup() {
 </div>
 
 
-          <button type="submit" className="auth-button" disabled={isLoading}>
-            {isLoading ? "Creating account..." : "Signup"}
+          <button type="submit" className="auth-button" disabled={isPending}>
+            {isPending ? "Creating account..." : "Signup"}
           </button>
         </form>
         

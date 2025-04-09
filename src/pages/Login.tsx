@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./Auth.css";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+//import { useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 
 
@@ -24,7 +24,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   const { login } = useAuth();
-  const { mutate, isLoading } = useLogin();
+  const { mutate, isPending } = useLogin();
 
   const onSubmit = (data: LoginSchema) => {
     console.log("Login form data:", data); // ✅ This will now log!
@@ -72,8 +72,8 @@ export default function Login() {
             {...register("password")}
             error={errors.password?.message}
           />
-          <button type="submit" className="auth-button" disabled={isLoading}>
-            {isLoading ? "Logging in..." : "Login"}
+          <button type="submit" className="auth-button" disabled={isPending}>
+            {isPending ? "Logging in..." : "Login"}
           </button>
         </form>
         <p className="auth-switch">

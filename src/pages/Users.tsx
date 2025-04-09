@@ -74,11 +74,11 @@ export default function Users() {
             <table style={{ width: "100%", borderCollapse: "collapse" }}>
               <thead>
                 <tr style={{ background: "#800000", color: "#fff" }}>
-                  <th style={thStyle}>Full Name</th>
-                  <th style={thStyle}>Email</th>
-                  <th style={thStyle}>Phone</th>
-                  <th style={thStyle}>Role</th>
-                  <th style={thStyle}>Actions</th>
+                  <th style={{ padding: "12px", textAlign: "left" }}>Full Name</th>
+                  <th style={{ padding: "12px", textAlign: "left" }}>Email</th>
+                  <th style={{ padding: "12px", textAlign: "left" }}>Phone</th>
+                  <th style={{ padding: "12px", textAlign: "left" }}>Role</th>
+                  <th style={{ padding: "12px", textAlign: "left" }}>Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -181,10 +181,10 @@ export default function Users() {
   );
 }
 
-const thStyle = {
-  padding: "10px",
-  textAlign: "left",
-};
+//const thStyle = {
+ // padding: "10px",
+ // textAlign: "left",
+//};
 
 const tdStyle = {
   padding: "10px",

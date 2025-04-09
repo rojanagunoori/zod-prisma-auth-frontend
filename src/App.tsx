@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Signup";
 import { motion } from "framer-motion";
@@ -7,13 +7,13 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Home from "./pages/Home";
 import Users from "./pages/Users";
-import { AuthProvider, useAuth } from "./context/AuthContext";
-import PrivateRoute from "./components/PrivateRoute";
+//import { AuthProvider, useAuth } from "./context/AuthContext";
+
 import NotFound from "./pages/NotFound";
 import NavLinks from "./components/NavLinks";
 
 export default function App() {
-  const { isAuthenticated } = useAuth();
+ // const { isAuthenticated } = useAuth();
   return (
 <>
       <ToastContainer position="top-center" autoClose={3000} />
