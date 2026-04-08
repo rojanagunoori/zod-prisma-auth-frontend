@@ -2,8 +2,8 @@ import axios from "axios";
 import { AuthRequest, AuthResponse } from "../types/auth";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
-  //"https://zod-prisma-auth-backend.onrender.com/api"//"http://localhost:5000/api",
+  //"http://localhost:5000/api",
+  baseURL: "https://zod-prisma-auth-backend.onrender.com/api", //"http://localhost:5000/api",
 });
 
 export const registerUser = async (
